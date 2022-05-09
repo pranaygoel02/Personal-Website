@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Pranay's Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a class="nav-title" href="index.html">Welcome</a>
+            <ul class="nav-links">
+                <li><a class="active" href="#about-me">About</a></li>
+                <li><a href="#projects">Pojects</a></li>
+                <li><a href="#contact-me">Contact</a></li>
+            </ul>
+            <button id="theme-btn" class="theme-btn"><img id="theme-img" class="theme-img" src="sun.png" alt=""></button>
+        </div>
+    </nav>
+    <div class="container landing-page">
+        <div class="watermark">
+            <div class="test">
+                <h1 class="stroke"><em>Code.Design.Develop.Code.Design.Develop.</em></h1>
+                <h1 class="stroke"><em>Code.Design.Develop.Code.Design.Develop.</em></h1>
+                <h1 class="stroke"><em>Code.Design.Develop.Code.Design.Develop.</em></h1>
+            </div>
+            <div class="test">
+                <h1 class="solid"><em>Code.Design.Develop.Code.Design.Develop.</em></h1>
+                <h1 class="solid"><em>Code.Design.Develop.Code.Design.Develop.</em></h1>
+                <h1 class="solid"><em>Code.Design.Develop.Code.Design.Develop.</em></h1>
+            </div>
+        </div>
+        <div class="container title">
+            <div class="text-box">
+                <h1 class="hi"><em>Hi!</em></h1>
+                <h1>I’m Pranay.</h1>
+                <hr class="line">
+                <p>A Coder, Graphic Designer, and Web Developer.</p>
+                <div class="buttons">
+                    <a id="resume" class="btn" href="avatar with person in glasses and orange shirt.svg" download="Pranay Goel Résumé">Résumé</a>
+                    <a id="contact" class="btn" href="#">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-element">
+                <img class="man" id="man" src="Group 14.svg" alt="">
+                <img class="planet" id="planet" src="blue planet with moon.svg" alt="">
+                <img class="webpage" id="webpage" src="web page.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="scroll-down">
+        <p>Know More</p>
+        <a href="#about-me"><img id="scroll" src="arrow-right.png" alt=""></a> 
+    </div>
+    <div id="about-me" class="about-me">
+        <div class="backdrop">
+            <div class="left">
+                <h1>About Me.</h1>
+            </div>
+            <div class="right">
+                <img src="images/my photo.jpeg" alt="">
+            </div>
+        </div>
+        <div class="top">
+            <h1>About Me<img  id="about-icon" src="flat-color-icons_about.svg" alt=""></h1>
+            <p class="about-para"><strong id="about-para-bold">B.Tech | CSE Undergrad | 1st Year at UEM Kolkata, India</strong><br><br>I’m a enthusiastic and creative person. I have passion for Programming and Graphic Designing and try to keep good knowledge in the fields. I like doing Competitive Programing as well.<br><br>At pressent I am testing hands on Front-end Web Development. My goal is to become a full stack web developer.<br><br>I believe that there is no end to learning good things. 
+                I make sure that whatever knowledge I have gained till date is used for the greater good, hence the development of the organization I am associated with.</p>
+        </div>
+    </div>
+    <div id="eduaction" class="education">
+        <div class="edu-left">
+            <h1>Educational Qualifications</h1>
+        </div>
+        <div class="edu-right">
+            <div class="credentials">
+                <img src="Mortarboard.svg" alt="">
+                <h1 id="marks" class="marks">9.27 CGPA</h2>
+                <h2 id="standard" class="standard">1st Sem</h2>
+                <p id="description" class="description"></p>
+            </div>
+            <div id="choice" class="radio">
+                <input type="radio" class="radio-btn" id="uem" name="choose" value="uem">
+                <input type="radio" class="radio-btn" id="isc" name="choose" value="isc">
+                <input type="radio" class="radio-btn" id="icse" name="choose" value="icse">
+            </div>
+        </div>
+    </div>
+    <div id="skills" class="skills">
+        <div class="skills-left">
+            <img id="vector" src="young man working on laptop.svg" alt="">
+            <div id="table"></div>
+        </div>
+        <div class="skills-right">
+            <h1 class="header">My Skills</h1>
+            <hr class="line">
+            <div class="logos">
+                <img id="java" class="logo" src="skills/java.svg"/>
+                <img id="python" class="logo" src="skills/py.svg"/>
+                <img id="html" class="logo" src="skills/html.svg"/>
+                <img id="css" class="logo" src="skills/css.svg"/>
+                <img id="js" class="logo" src="skills/js.svg"/>
+                <img id="ps" class="logo" src="skills/ps.svg"/>
+                <img id="ai" class="logo" src="skills/ai.svg"/>
+                <img id="filmora" class="logo" src="skills/filmora.svg"/>
+            </div>
+            <hr class="line">
+        </div>
+    </div>
+    <div id="projects" class="projects">
+        <div class="project-header">
+            <h1 class="header">Projects</h1>
+            <p>Take a look at some of the work I have done so far.</p>
+        </div>
+        <hr class="line">
+        <!-- <h1 class="project-stroke solid"><em>WEB DEVELOPMENT.</em></h1> -->
+        <div class="projects-info">
+            <div class="project">
+                <div class="left">
+                    <h1>Bibliophilia</h1>
+                    <p>Bibliophilia is a mock E-book application venture which happened as a part of UEMK's entrepreneurship subject.<br><br>I made a static website to showcase an E-book subscription service.</p>
+                    <div class="languages">
+                        <div id="lang" class="html">HTML</div>
+                        <div id="lang" class="css">CSS</div>
+                    </div>
+                    <div class="buttons">
+                        <a id="resume" class="btn" href="https://pranaygoel02.github.io/bibliophilia/" target="_blank">Visit Site</a>
+                        <a id="contact" class="btn" href="https://github.com/pranaygoel02/bibliophilia.git" target="_blank">Visit Repo.</a>
+                    </div>
+                </div>
+                <div class="right"></div>
+            </div>
+            <div class="project">
+                <div class="left">
+                    <h1>Blackjack Game</h1>
+                    <p>Blackjack is a popular card game.<br><br>I have tried to implement the game logic via my code. I have also given the game a user friendly graphical interface that players would like.</p>
+                    <div class="languages">
+                        <div id="lang" class="html">HTML</div>
+                        <div id="lang" class="css">CSS</div>
+                        <div id="lang" class="js">JS</div>
+                    </div>
+                    <div class="buttons">
+                        <a id="resume" class="btn" href="https://pranaygoel02.github.io/Blackjack-Game/" target="_blank">Visit Site</a>
+                        <a id="contact" class="btn" href="https://github.com/pranaygoel02/Blackjack-Game.git" target="_blank">Visit Repo.</a>
+                    </div>
+                </div>
+                <div class="right"></div>
+            </div>
+            <!-- <div class="project">
+                <div class="left">
+                    <h1>Personal Website</h1>
+                    <p>Blackjack is a popular card game.<br><br>I have tried to implement the game logic via my code. I have also given the game a user friendly graphical interface that players would like.</p>
+                    <div class="languages">
+                        <div id="lang" class="html">HTML</div>
+                        <div id="lang" class="css">CSS</div>
+                        <div id="lang" class="js">JS</div>
+                    </div>
+                    <div class="buttons">
+                        <a id="resume" class="btn" href="https://pranaygoel02.github.io/Blackjack-Game/" target="_blank">Visit Site</a>
+                        <a id="contact" class="btn" href="https://github.com/pranaygoel02/Blackjack-Game.git" target="_blank">Visit Repo.</a>
+                    </div>
+                </div>
+                <div class="right"></div>
+            </div> -->
+        </div>
+    </div>
+    <!-- <div class="resume">
+        <h1>Download Resume</h1>
+    </div> -->
+    <div id="profiles" class="projects">
+        <hr class="line">
+        <div class="project-header">
+            <h1 class="header">Coding Profiles</h1>
+        </div>
+        <hr class="line">
+        <div class="logo coding-profiles">
+            <a target="_blank" href="https://www.hackerearth.com/@goel.2002pranay"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/HackerEarth_logo.png" alt=""></a>
+            <a target="_blank" href="https://www.codechef.com/users/pranay02"><img src="https://gitgud.io/uploads/-/system/group/avatar/12294/cc.png" alt=""></a>
+            <a target="_blank" href="https://github.com/pranaygoel02"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""></a>
+            <a target="_blank" href="https://leetcode.com/user4968A/"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png?20191202080835" alt=""></a>
+            <a target="_blank" href="https://www.hackerrank.com/pranay_goel"><img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt=""></a>
+        </div>        
+        <hr class="line">
+    </div>
+    <div id="contact-me" class="contact">
+        <div class="left">
+            <h1>Let's stay in touch.</h1>
+        </div>
+        <div class="right">
+            <div class="contact-card">
+                <h1>Contact</h1>
+                <div>
+                    <form class="form" action="">
+                        <div class="input-data">
+                            <input type="text" name="name" id="name" class="input-field" required>
+                            <label class="label" id="name-label" for="name">Name</label>
+                            <span></span>
+                        </div>
+                        <div class="input-data">
+                            <input type="email" name="email" id="email" class="input-field" required>
+                            <label class="label" id="email-label" for="name">Email</label>
+                            <span></span>
+                        </div>
+                        <div class="input-data">
+                            <textarea class="input-field" id="message" name="message" rows="10" cols="33" required></textarea>
+                            <label class="label" id="message-label" for="message">Leave a Message</label>
+                            <span></span>
+                        </div>
+                        <button class="btn" type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <h2>Pranay Goel</h2>
+        <p>Code. Design. Develop.</p>
+        <hr class="line">
+        <!-- <ul class="nav-links">
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#projects">Pojects</a></li>
+            <li><a href="#contact-me">Contact</a></li>
+        </ul> -->
+        <div class="media-icons">
+            <a href="https://www.instagram.com/pranay_goel__/" target="_blank"><img src="media-icons/insta.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/pranay-goel-01023a1b1/" target="_blank"><img src="media-icons/in.svg" alt=""></a>
+            <a href="https://github.com/pranaygoel02" target="_blank"><img src="media-icons/github.svg" alt=""></a>
+            <a href="https://twitter.com/pranay_goel__" target="_blank"><img src="media-icons/twitter.svg" alt=""></a>
+        </div>
+        <p class="copy">&copy Copyright, Pranay Goel, 2022 | All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
