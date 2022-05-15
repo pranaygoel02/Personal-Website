@@ -86,10 +86,41 @@ $('#choice input').on('change', function(){
     }
 });
 
-//contact form
-$('#name').on('focus',function(){
-    $('#name-label').addClass('focus');
+const sectionOne = document.querySelector(".landing-section");
+const options = {
+    root: null,
+    threshold: 0.5,
+    rootmargin: "-150px"
+};
+const observer = new IntersectionObserver(function(entries,observer){
+    entries.forEach(entry => {
+        if(!entry.isIntersecting){
+            console.log(entry.target);
+            $("#nav-title").text("Pranay Goel");
+        }
+        else{ 
+            $("#nav-title").text("Welcome");
+        }
+    });
+},options);
+observer.observe(sectionOne);
+
+
+$("#menu-btn").click(function(){
+    $(".nav-links").toggleClass("menu-display");
 });
-$('#name').off('focus',function(){
-    $('label').removeClass('focus');
+
+let lastScrollY = window.scrollY;
+$(window).scroll(function(){
+    if(window.scrollY>lastScrollY){
+        console.log("down");
+        if($(".nav-links").hasClass("menu-display")){
+            return;
+        }
+        $("nav").addClass("hide-nav");
+    }else{
+        console.log("up");
+        $("nav").removeClass("hide-nav");
+    }
+    lastScrollY = window.scrollY;
 });

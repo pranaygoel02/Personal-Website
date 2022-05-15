@@ -4,20 +4,44 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 0.6em;
+}
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg, #196454 0%, #1da391 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100vw;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(180deg, #17554c 0%, #17554c 99%);
+}
+::-webkit-scrollbar-track{
+    background: none;
+    border-radius: 100vw;
+}
+::-webkit-scrollbar-track-piece:start {
+    background: #196454;
+ }
 body{
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
     font-family: 'Helvetica', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+section{
+    height: auto;
+}
 nav{
     height: 60px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     z-index: 3;
     display: flex;
@@ -48,9 +72,23 @@ a{
     text-align: center;
 }
 .nav-title{
+    transition: all 1s ease;
     font-weight: 600;
     font-size: 1.5rem;
 }
+/* .nav-animate{
+    animation: nav-title 2s linear;
+}
+@keyframes nav-title{
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+} */
 li{
     padding: 5px 18px;
     font-size: 1.1rem;
@@ -79,10 +117,11 @@ li{
 
 .landing-page{
     margin-top: 80px;
-    height: calc(100vh - 80px);
+    height: calc(100% - 80px);
     justify-content: center;
     align-items: center;
-    font-size: 140px;
+    font-size: 160px;
+    /* flex-wrap: wrap; */
 }
 
 /*WATERMARK MARQUEE*/
@@ -129,7 +168,7 @@ li{
     flex-direction: row;
 }
 .text-box{
-    font-size: 65px;
+    font-size: 80px;
     width: 60vw;
     justify-content: center;
     display: flex;
@@ -225,12 +264,13 @@ li{
 }
 .scroll-down{
     position: absolute;
-    top: 85vh;
+    bottom: 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-size: 1rem;
 }
 #scroll{
     width: 50px;
@@ -240,7 +280,7 @@ li{
 }
 
 /*About Me section*/
-.about-me{
+.about-me,.about-section{
     width: 100%;
     height: 100vh;
 }
@@ -256,7 +296,7 @@ li{
     background: #202020;
     padding: 40px 40px 100px 80px;
     color: #69666609;
-    font-size: 150px;
+    font-size: 190px;
 }
 .right{
     width: 40%;
@@ -272,14 +312,29 @@ li{
     position: absolute;
     color: white;
     z-index: 2;
-    font-size: 80px;
+    font-size: 110px;
 }
 .top h1{
-    padding: 50px 132px 0px;
+    padding: 50px 125px 0px;
 }
 #about-icon{
     width: 125px;
-    transform: translateY(-10px) translateX(30px);
+    transform: translateY(-30px) translateX(20px);
+}
+.about-animation{
+    animation: about-icon 0.5s linear;
+}
+@keyframes about-icon{
+    0%{
+        width: 0px;
+        opacity: 0;
+        transform: rotateZ(-30deg);
+    }
+    100%{
+        width: 125px;
+        opacity: 1;
+        transform: rotateZ(0deg) translateY(-30px) translateX(20px);
+    }
 }
 .about-para{
     font-size: 19px;
@@ -306,12 +361,12 @@ li{
     transition: all 0.5s ease-out;
 }
 .nav-links a:hover::before{
-    width: 30px;
+    width: 40px;
 }
 
 /*Education*/
 
-.education {
+.education, .education-section {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -328,6 +383,7 @@ li{
     font-size: 35px;
 }
 .edu-left h1{
+    font-size: 4.2rem;
     width: 100%;
     text-align: center;
     text-indent: -1em;
@@ -416,13 +472,13 @@ li{
 .skills-left img{
     position: relative;
     width: 650px;
-    padding: 80px 50px 40px;
+    padding: 80px 80px 40px;
     z-index: 1;
 }
 #table{
     position: absolute;
     height: 210px;
-    width: 100vw;
+    width: 104vw;
     background: #e48622;
     bottom: 0px;
     border-radius: 0px 150px 0px 0px;
@@ -690,10 +746,6 @@ form{
     position: relative;
     margin-bottom: 20px;
 }
-/* .form .input-data input{
-    width: 100%;
-    display: flex;
-} */
 .form .input-data .label{
     position: absolute;
     top: 10px;
@@ -774,4 +826,511 @@ form{
 }
 .footer img{
     width: 30px;
+}
+
+
+/*MEDIA QUERIE FOR TABLET*/
+
+@media screen and (max-width: 768px){
+    
+    .nav-container{
+        width: 90%;
+    }
+    .nav-title{
+        font-size: 1.4rem;
+    }
+    .theme-btn{
+        display: flex;
+        width: 50px;
+        padding: 2px;
+        border-radius: 20px;
+        background: transparent;
+        border: solid white 1px;
+    }
+    .theme-img{
+        padding: 2px;
+        width: 18px;
+    }
+    .dark-mode{
+        transform: translateX(20px) rotateZ(45deg);
+    }
+    
+    .landing-page{
+        height: auto;
+        font-size: 120px;
+        display: flex;
+        flex-direction: column;
+    }  
+    .tilte{
+        padding: 40px;
+    }
+    .text-box{
+        width: 80vw;
+        padding: 20px;
+    }
+    .text-box h1{
+        width: 60%;
+        font-size: 1.2em;
+    }
+    #hi{
+        font-size: 90px;
+    }
+    .text-box p{
+        width: 80%;
+        padding: 30px 40px 20px;
+        font-size: 1.8rem;
+    }
+    .line{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+    }
+    .man{
+        position: relative;
+        float: right;
+        width: 150%;
+        left: 180px;
+        top: 10px;
+    }
+    .planet{
+        width: 230px;
+        top: 320px;
+        right: 20px;
+    }
+    .webpage{
+        right: 115px;
+        top: 45px;
+        width: 160px;
+    }
+    .hero-element{
+        left: -105px;
+    }
+    .buttons{
+        padding: 10px 40px;
+    }
+    .btn{
+        width: 155px;
+        font-size: 1.2rem;
+    }
+    .btn:hover{
+        box-shadow: inset 181px 0 0 0 white;
+        color: black;
+    }
+    .scroll-down{
+        position: relative;
+    }
+    #scroll{
+        width: 40px;
+    }
+    
+    /*About Me section*/
+    .about-me,.about-section{
+        height: 614px;
+    }
+    .left{
+        width: 50%;
+        padding: 40px 0px 0px 0px;
+        font-size: 150px;
+        height: auto;
+    }
+    .right{
+        width: 50%;
+    }
+    .right img{
+        width: 120%;
+    }
+    .top{
+        font-size: 4rem;
+    }
+    .top h1{
+        padding: 60px 60px 0;
+    }
+    #about-icon{
+        width: 90px;
+        transform: translateX(10px);
+    }
+    .about-para{
+        font-size: 1rem;
+        width: 60%;
+        padding: 30px 70px 30px;
+        background: #75ab9e11;
+    }
+    .about-para:hover{
+        box-shadow: none;
+    }
+    /*Education*/
+    
+    .education, .education-section {
+        position: relative;
+        height: 30vh;
+    }
+    
+    .edu-left,.edu-right{
+        font-size: 1rem;
+    }
+    .edu-left h1{
+        font-size: 2.8rem;
+    }
+    .credentials img{
+        width: 20%;
+        margin: 0px auto 10px;
+    }
+    .radio input{
+        width: 15px;
+        height: 15px;
+    }
+    .marks{
+        font-size: 3.5em;
+    }
+    .standard{
+        font-size: 2rem;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    
+    /*SKILLS*/
+    
+    .skills-left{
+        width: 0vw;
+        position: relative;
+    }
+    .skills-left img{
+        padding: 300px 80px 40px;
+       
+    }
+    #table{
+        width: 110vw;
+        border-radius: 0px;
+    }
+    .skills-right{
+        width: 100vw;
+        padding: 30px 0px;
+    }
+    .skills-right h1{
+        padding: 0 30px;
+        text-align: center;
+        font-size: 4rem;
+    }
+    /*Projects*/
+    
+    .project-header p{
+        padding: 0px 0 0;
+        font-size: 1rem;
+    }
+    .projects-info .project .left{
+        width: 45%;
+        padding: 40px 0 30px 40px;
+    }
+    .projects-info .project .left h1{
+        font-size: 2.5rem;
+    }
+    .projects-info .project .left h1::before{  
+        padding: 12px 100px;
+        transform: translateY(25px) translateX(-3px);
+    }
+    
+    .projects-info .project .left .buttons .btn{
+        padding: 15px 5px;
+        width: 120px;
+        margin-right: 15px;
+    }
+    .project{
+        display: flex;
+    }
+    .projects-info .project .left p{
+        font-size: 1.1rem;
+    }
+    .coding-profiles img{
+        width: 90px;
+    }
+    
+    /*CONTACT*/
+    .contact{
+        height: auto;
+    }
+    .contact .left{
+        width: 100%;
+        background-size: 85%;
+    }
+    .contact .left h1{
+        font-size: 6rem;
+    }
+    .contact .right{
+        position: absolute;
+        padding: 0px;
+        transform: translateX(105%);
+    } 
+    .form .input-data .input-field{
+        width: 90%;
+    } 
+    .form .btn{
+        width: 200px;
+    }
+    
+}
+
+@media screen and (max-width: 480px){
+    body{
+        overflow-x: hidden;
+    }
+    .landing-section{  
+        width: 480px;
+        overflow-x: hidden;
+    }
+    .nav-links{
+        display: none;
+        list-style: none;
+    }
+    .landing-page{
+        height: auto;
+        font-size: 120px;
+        display: flex;
+        flex-direction: column;
+    }  
+    .tilte{
+        padding: 20px;
+    }
+    .text-box{
+        width: 60vw;
+        padding: 10px 0;
+    }
+    .text-box h1{
+        width: 40%;
+        font-size: 0.8em;
+    }
+    #hi{
+        font-size: 0.5em;
+    }
+    .text-box p{
+        width: 100%;
+        padding: 50px 40px 20px;
+        font-size: 1.3rem;
+    }
+    .line{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        width: 115%;
+    }
+    .man{
+        position: relative;
+        float: right;
+        width: 130%;
+        left: 150px;
+        top: 15px;
+    }
+    .planet{
+        width: 155px;
+        top: 210px;
+        right: -45px;
+    }
+    .webpage{
+        right: 40px;
+        top: 45px;
+        width: 100px;
+    }
+    .buttons{
+        padding: 10px 0px 10px 40px;
+        display: flex;
+        /* flex-direction: column; */
+    }
+    .btn{
+        width: 150px;
+        font-size: 1rem;
+        padding: 12px 5px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    /*About Me section*/
+    .about-me,.about-section{
+        height: 614px;
+    }
+    .left{
+        width: 90%;
+        padding: 20px 0px 0px 5px;
+        font-size: 120px;
+        height: auto;
+        background-image: url('images/my\ photo.jpeg');
+        background-repeat: no-repeat;
+        background-size: 140%;
+        background-position: top left;
+    }
+    .right{
+        display: none;
+    }
+    .top{
+        font-size: 3rem;
+        text-align: center;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+    }
+    .top h1{
+        padding: 40px 15px 20px;
+    }
+    #about-icon{
+        width: 70px;
+        transform: translateX(10px);
+    }
+    .about-para{
+        font-size: 1rem;
+        padding: 30px 40px 30px;
+        background: #020e1d67;
+        width: 400px;
+        text-align: justify;
+    }
+    .education, .education-section {
+        position: relative;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .edu-left,.edu-right{
+        width: 100%;
+        font-size: 0.5rem;
+        text-align: center;
+    }
+    .edu-left h1{
+        text-indent: 0px;
+        font-size: 2rem;
+        padding: 30px;
+    }
+    .credentials img{
+        width: 15%;
+        margin: 0px auto 10px;
+    }
+    .edu-right{
+        background: white;
+        display: flex;
+        flex-direction: column;
+    }
+    .marks{
+        font-size: 4rem;
+    }
+    .description{
+        font-size: 1rem;
+        text-align: center;
+    }
+    #choice{
+        display: flex;
+        flex-direction: row;
+    }
+    .radio input:checked{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #75AB9E;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .skills-left{
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+    .skills-left img{
+        text-align: center;
+        padding: 300px 0px 40px 15px;
+        width: 450px;
+    }
+    #table{
+        width: 110vw;
+        border-radius: 0px;
+        height: 160px;
+    }
+    .skills-section{
+        margin-top: 100px;
+    }
+    .project-header p{
+        padding: 0;
+        font-size: 1.1rem;
+        letter-spacing: 0.8px;
+    }
+    .project{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .projects h1{
+        padding-top: 20px;
+        font-size: 4rem;
+        margin-bottom: 2px;
+    }
+    .projects-info .project .left{
+        width: 100%;
+    }
+    .projects-info .project .right{
+        display: flex;
+        width: 100%;
+        background: red;
+        color: black;
+    }
+    .coding-profiles img{
+        width: 70px;
+    }
+    #profiles h1{
+        padding: 20px;
+        font-size: 3rem;
+    }
+    @keyframes logos{
+        0%{
+            transform: translateX(20%);
+        }
+        100%{
+            transform: translateX(-300%);
+        }
+    }
+    #profiles .line{
+        width: 100%;
+    }
+    .coding-profiles{
+        display: flex;
+        gap: 20px;
+    }
+    .contact .right{
+        position: absolute;
+        padding: 0px;
+        transform: translateX(53%) translateY(30px);
+        width: 100%;
+    }
+    .form .input-data .input-field{
+        width: 70%;
+    }  
+    .contact .left{
+        background-position: top left;
+        background-size: 100%;
+    }
+    
+    .contact .left h1{
+        opacity: 1;
+        position: relative;
+        color: black;
+        filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.26));
+        transform: rotate(-42deg) translateY(-100px);
+        width: 900px;
+        font-size: 6rem;
+        animation: animate3 10s linear infinite;
+    }
+    @keyframes animate3 {
+        0%{
+            transform: translateX(900px) rotate(0deg); 
+        }
+        100%{
+            transform: translateX(-1100px) rotate(0deg);
+        }
+    }
+    .contact .right h1{
+        margin-bottom: 20px;
+        font-size: 3.5rem;
+    }
+    .contact-card{
+        width: 100vw;
+    }
+    
 }
