@@ -88,7 +88,6 @@ a{
 }
 
 .nav-title{
-    transition: all 1s ease;
     font-weight: 600;
     font-size: 1.8em;
     padding: 0 1em;
@@ -635,9 +634,11 @@ form{
 }
 .skills-right .logos{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    animation: logos 10s linear infinite;
+    overflow-x: hidden;
+    /* animation: logos 10s linear infinite; */
 }
 @keyframes logos{
     0%{
