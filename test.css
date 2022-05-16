@@ -635,11 +635,9 @@ form{
 }
 .skills-right .logos{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    overflow-x: hidden;
-    /* animation: logos 10s linear infinite; */
+    animation: logos 10s linear infinite;
 }
 @keyframes logos{
     0%{
