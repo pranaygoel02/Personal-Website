@@ -105,6 +105,9 @@ const observer = new IntersectionObserver(function(entries,observer){
 },options);
 observer.observe(sectionOne);
 
+if ($(window).width() < 960) {
+    alert('Less than 960');
+ }
 
 $("#menu-btn").click(function(){
     $(".nav-links").toggleClass("menu-display");
