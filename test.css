@@ -622,6 +622,7 @@ form{
     background: #1a1a1a;
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.356);
+    overflow: hidden;
 }
 .skills-right h1{
     text-align: center;
